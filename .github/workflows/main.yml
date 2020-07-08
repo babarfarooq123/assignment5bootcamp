@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Assignment 5 Context API and Reducer
+name: Assignment 5
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -38,4 +38,3 @@ jobs:
       run: npm i -g surge
     - name: Deploying App on Surge
       run: surge ./build http://assignment5bootcamp.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
-    
