@@ -25,17 +25,17 @@ jobs:
       with:
           node-version: 12
 
-    # Runs a set of commands using the runners shell
+    # Runs a single command using the runners shell
     - name: Installing npm
       run: npm i
 
-
-    - name: Creating build
+    # Runs a set of commands using the runners shell
+    - name: cREATING BUILD
       run: npm run build
-  
-    - name: Installing surge
+
+
+    - name: Installing Surge
       run: npm i -g surge
-    
     - name: Deploying App on Surge
       run: surge ./build http://assignment5bootcamp.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
     
